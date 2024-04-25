@@ -1,6 +1,275 @@
-#root {
-  max-width: 1280px;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #090A0E;
+  color: #ffffff;
+}
+
+.center-max-size {
+  max-width: 1020px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 15px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center; /* Centralizar verticalmente */
+  justify-content: space-between;
+  padding: 15px;
+  text-transform: uppercase;
+}
+
+.poster {
+  background-size: cover;
+  background-position: top center;
+  min-height: 600px;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 50px;
+  position: relative;
+}
+
+.poster-content {
+  width: 80%;
+}
+
+h1 {
+  font-size: 92px;
+  margin-top: 0;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.container {
+  background-color: #0F1014;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
   text-align: center;
+  align-items: center;
+}
+
+  .button {
+    margin: 20px 1px;
+    background: #0F1014;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 1px solid gray;
+  }
+  
+  .button:hover {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .close-video {
+    position: absolute;
+    bottom: -13px; /* Posicione o botão abaixo do vídeo */
+    left: 50%; /* Centralize o botão horizontalmente */
+    transform: translateX(-50%); /* Ajuste a posição horizontal do botão */
+    z-index: 9000; /* Certifique-se de que o botão fique acima do vídeo */
+  }
+  
+  .youtube-container {
+    position: relative;
+  }
+  
+  .brand {
+    font-weight: bold;
+  }
+  
+  /*-- MOVIE */
+  
+  .movie {
+    position: relative;
+    cursor: pointer;
+    text-align: left;
+    font-size: 16px;
+  }
+  
+  .movie img {
+    height: 355px;
+    max-width: 100%;
+  }
+  
+  .movie-infos {
+    padding: 15px 0;
+  }
+  
+  .movie-title {
+    margin: 0;
+  }
+  
+  .movie-voting {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background-color: #0F1014;
+    border: 1px solid gray;
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 25px;
+  }
+  
+  /** SEARCH **/
+  .form {
+    position: relative;
+    display: flex; /* Adicionado para centralizar verticalmente o formulário */
+    align-items: center; /* Centralizar verticalmente */
+  }
+  
+  .search {
+    border: 1px solid darkslategray;
+    outline: transparent;
+    background-color: transparent;
+    padding: 5px 10px;
+    border-radius: 25px;
+    color: white;
+  }
+  
+  .submit-search {
+    position: absolute;
+    top: 55%;
+    right: -30px;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: white; /* Cor branca para o ícone */
+  }
+  
+  .logo {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin-right: 10px; /* Espaço entre logo e formulário */
+    cursor: pointer; /* Adicionado cursor para indicar que é clicável */
+  }
+  /* Adicione o seguinte estilo ao título h2 */
+  .title {
+    text-align: center; /* Centraliza horizontalmente */
+    line-height: 15vh; /* Centraliza verticalmente */
+}
+
+/* Estilos para o ícone à esquerda */
+.jaca-icon-left {
+  width: 24px; /* Ajuste o tamanho conforme necessário */
+  height: auto;
+  margin-right: 5px; /* Espaço entre o ícone e o texto do título */
+}
+
+/* Estilos para o ícone à direita */
+.jaca-icon-right {
+  width: 24px; /* Ajuste o tamanho conforme necessário */
+  height: auto;
+  margin-left: 5px; /* Espaço entre o texto do título e o ícone */
+}
+
+/* Estilos para o contêiner principal que envolve o vídeo e o botão */
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro para sobrepor */
+  display: flex;
+  align-items: center; /* Centralizar verticalmente */
+  justify-content: center; /* Centralizar horizontalmente */
+  z-index: 9999; /* Ajuste o valor do z-index conforme necessário */
+}
+
+/* Estilos para o vídeo do YouTube */
+.youtube {
+  width: 1000px;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centralizar o vídeo */
+}
+
+/* CSS para centralizar o reprodutor de vídeo */
+.center-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Define a altura da área de visualização da tela */
+  position: fixed; /* Mantém o elemento no centro mesmo com rolagem */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* Define uma cor de fundo transparente por trás do vídeo */
+  z-index: 999; /* Define a ordem de sobreposição para que o vídeo fique na parte superior */
+}
+
+.fullscreen-video {
+  width: 100%;
+  height: 100vh; /* Altura total da janela de visualização */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.close-video {
+  position: absolute;
+  top: 10px; /* Centralize o botão no topo do vídeo */
+  left: 50%; /* Centralize o botão horizontalmente */
+  transform: translateX(-50%); /* Ajuste a posição horizontal do botão */
+  width: 35px;
+  height: 35px;
+  background-color: rgb(119, 67, 67);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-video::before,
+.close-video::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 25px;
+  background-color: white;
+}
+
+.close-video::before {
+  transform: rotate(45deg);
+}
+
+.close-video::after {
+  transform: rotate(-45deg);
+}
+
+.logout-button {
+  position: absolute;
+  top: 65px; /* Ajuste a distância do topo conforme necessário */
+  right: 10px; /* Ajuste a distância da direita conforme necessário */
+  background-color: #f0e68c; /* Cor de fundo padrão do botão */
+  color: #030303; /* Cor do texto do botão */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s; /* Adicione uma transição suave para a mudança de cor */
+}
+
+.logout-button:hover {
+  background-color: #ffcc00; /* Cor de fundo quando o mouse está sobre o botão */
 }

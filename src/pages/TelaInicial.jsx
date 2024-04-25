@@ -1,14 +1,15 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
+import '../styles/TelaInicial.css'; // Importe o CSS da pasta styles
 
 const TelaInicial = () => {
     return (
-        <div>
-            GhibliQuest <br />
-            <Link to="/home">Entrar</Link>
-            <Outlet/>
+        <div className="telaInicial">
+            <h1>GhibliQuest</h1>
+            <p>Adentre nesse mundo mágico</p>
+            <Link to="/home" className="botaoEntrar">Entrar</Link>
         </div>
-    )
+    );
 }
 
 export default TelaInicial;

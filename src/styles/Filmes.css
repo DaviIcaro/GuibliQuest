@@ -1,0 +1,44 @@
+.filmes {
+    padding: 20px;
+    max-width: 1200px; /* Largura máxima do container */
+    margin: auto;
+}
+
+.movie-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Distribui o espaço igualmente */
+}
+
+.movie-card {
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.2s; /* Efeito suave ao passar o mouse */
+    flex-basis: calc(25% - 20px); /* Define a largura para 25% do container, subtraindo as margens */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+    display: flex; /* Configuração de flexbox para o alinhamento vertical */
+    flex-direction: column; /* Organiza o conteúdo em colunas */
+    align-items: center; /* Centraliza horizontalmente */
+    text-align: center; /* Alinha o texto ao centro */
+    width: 240px; /* Largura fixa para evitar expansão devido a títulos grandes */
+}
+
+.movie-card:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente o filme ao passar o mouse */
+}
+
+.movie-card img {
+    width: 140px; /* Largura fixa para todas as imagens */
+    height: 160px; /* Altura fixa para manter a proporção */
+}
+
+.movie-card h2 {
+    font-size: 14px; /* Tamanho da fonte do título do filme */
+    color: white; /* Define a cor do texto */
+    margin-top: 5px; /* Espaço entre a imagem e o título */
+    padding: 0 5px; /* Adiciona um pouco de padding para evitar que o texto toque as bordas */
+    overflow: hidden; /* Previne o desbordamento de texto */
+    text-overflow: ellipsis; /* Adiciona reticências se o texto for muito longo */
+    white-space: nowrap; /* Evita que o texto quebre em linhas múltiplas */
+    width: 90%; /* Garante que o título ocupe apenas uma parte do cartão */
+}

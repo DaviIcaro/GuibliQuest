@@ -7,5 +7,6 @@ import { Rotas } from './routes/RouterConfig.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={Rotas}/>
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
