@@ -1,9 +1,9 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, Navigate } from 'react-router-dom';
 import App from '../App';
 import Home from "../pages/Home";
 import Personagens from "../pages/Personagens";
-import TelaInicial from "../pages/TelaInicial";
 import Trailers from "../pages/Trailers";
+import TelaInicial from '../pages/TelaInicial';
 
 export const Rotas = createBrowserRouter([
     {
@@ -11,7 +11,11 @@ export const Rotas = createBrowserRouter([
         element: <App/>,
         children: [
             {
-                path: "/",
+                index: true,
+                element: <Navigate to="/inicio" replace />
+            },
+            {
+                path: "/inicio",
                 element: <TelaInicial/>
             },
             {

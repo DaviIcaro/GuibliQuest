@@ -1,9 +1,12 @@
 import React from "react";
+import { Link, Outlet } from "react-router-dom";
 
 const TelaInicial = () => {
     return (
         <div>
-            <h1>TelaInicial</h1>
+            GhibliQuest <br />
+            <Link to="/home">Entrar</Link>
+            <Outlet/>
         </div>
     )
 }
