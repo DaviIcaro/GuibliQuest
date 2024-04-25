@@ -1,6 +1,7 @@
 // components/Navbar.js
 import React from 'react';
 import '../styles/Navbar.css';
+import searchIcon from '../assets/search-icon.svg';
 
 const Navbar = () => {
     return (
@@ -8,6 +9,7 @@ const Navbar = () => {
             <div className="navbar-title">GuibliQuest</div>
             <div className="navbar-search">
                 <input type="text" placeholder="Pesquisar"/>
+                <img className='search-icon' src={searchIcon} alt="icone de pesquisa"/>
             </div>
         </div>
     );

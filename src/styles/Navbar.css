@@ -1,7 +1,7 @@
 /* navbar.css */
 .navbar {
     width: 100%; /* Usa 100% da largura da viewport */
-    height: 92px; /* Altura fixa */
+    height: 80px; /* Altura fixa */
     background-color: #2B2B2B;
     display: flex;
     align-items: center;
@@ -12,16 +12,14 @@
 
 .navbar-title {
     font-family: 'Lakki Reddy', cursive;
-    font-size: 24px;
+    font-size: 33px;
     color: white;
     width: 185px;
     height: 51px;
     display: flex; /* Permite usar alinhamento flexível */
     align-items: center; /* Alinha o texto verticalmente no centro */
     justify-content: center; /* Alinha o texto horizontalmente no centro */
-    margin-left: 5px; /* Mantém a margem à esquerda */
-    margin-top: 30px; /* Adiciona margem superior para mover o título para baixo */
-
+    margin-top: 10px;
 }
 
 .navbar-search {
@@ -34,9 +32,6 @@
     justify-content: center; /* Alinha o input horizontalmente no centro */
     padding: 0 10px; /* Padding interno para o input */
     box-sizing: border-box;
-    margin-left: auto; /* Alinha à direita */
-    margin-right: 29px; /* Margem à direita para simetria */
-    margin-top: 30px; /* Adiciona margem superior para mover o título para baixo */
 }
 
 .navbar-search input {
@@ -46,4 +41,9 @@
     font-size: 14px;
     color: #5E5E5E;
     outline: none; /* Remove o contorno ao focar */
+}
+
+.search-icon {
+    height: 20px;
+    width: 20px;
 }

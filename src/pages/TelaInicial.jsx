@@ -5,9 +5,11 @@ import '../styles/TelaInicial.css'; // Importe o CSS da pasta styles
 const TelaInicial = () => {
     return (
         <div className="telaInicial">
-            <h1>GhibliQuest</h1>
-            <p>Adentre nesse mundo mágico</p>
-            <Link to="/home" className="botaoEntrar">Entrar</Link>
+            <div className="telaInicialTexto">
+                <h1>GhibliQuest</h1>
+                <p>Adentre nesse mundo mágico</p>   
+                <Link to="/home" className="botaoEntrar">Entrar</Link>
+            </div>
         </div>
     );
 }
