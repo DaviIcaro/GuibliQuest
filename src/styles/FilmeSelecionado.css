@@ -1,0 +1,15 @@
+.FilmeSelecionado {
+    padding: 20px;
+    max-width: 1200px; /* Largura máxima do container */
+    margin: auto;
+}
+
+.selected-movie-display {
+    display: flex;
+    justify-content: space-between;
+}
+
+.links {
+    display: flexbox;
+    flex-direction: column;
+}

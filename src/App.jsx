@@ -1,11 +1,14 @@
 import './App.css'
 import { Link, Outlet } from "react-router-dom";
+import { MovieProvider } from './context/MovieContext';
 
 function App() {
   return (
-    <div>
-      <Outlet/>
-    </div>
+    <MovieProvider>
+      <div>
+        <Outlet/>
+      </div>
+    </MovieProvider>
   )
 }
 

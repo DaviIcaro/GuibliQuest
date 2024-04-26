@@ -42,3 +42,24 @@
     white-space: nowrap; /* Evita que o texto quebre em linhas múltiplas */
     width: 90%; /* Garante que o título ocupe apenas uma parte do cartão */
 }
+
+.selected-movie-display {
+    display: flex;
+    justify-content: space-between;
+}
+
+.movie-details {
+    width: 350px;
+    height: auto;
+    text-align: justify;
+    float: right;
+    background-color: rgba(255, 255, 255, 0.6);
+    color: black;
+    border-radius: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.poster {
+    height: 25px;
+}
