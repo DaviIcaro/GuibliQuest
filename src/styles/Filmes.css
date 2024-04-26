@@ -1,10 +1,13 @@
 .filmes {
     padding: 20px;
-    max-width: 1200px; /* Largura máxima do container */
     margin: auto;
+    background-color: rgb(35, 35, 35);
+    display: flexbox;
 }
 
 .movie-grid {
+    max-width: 1200px;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around; /* Distribui o espaço igualmente */
@@ -43,23 +46,10 @@
     width: 90%; /* Garante que o título ocupe apenas uma parte do cartão */
 }
 
-.selected-movie-display {
-    display: flex;
-    justify-content: space-between;
-}
-
-.movie-details {
-    width: 350px;
-    height: auto;
-    text-align: justify;
-    float: right;
-    background-color: rgba(255, 255, 255, 0.6);
-    color: black;
-    border-radius: 15px;
-    padding-left: 30px;
-    padding-right: 30px;
-}
-
 .poster {
     height: 25px;
+}
+
+.filmes h1 {
+    font-size: 40px;
 }

@@ -30,6 +30,7 @@ const Filmes = () => {
 
   return (
     <div className="filmes">
+      <h1 className='title'>Filmes mais recentes</h1>
       <div className="movie-grid">
         {movies.map((movieItem) => (
           <div key={movieItem.id} className="movie-card" onClick={() => setSelectedMovie(movieItem)}>

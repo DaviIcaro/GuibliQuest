@@ -10,15 +10,15 @@ const FilmeSelecionado = () => {
   return (
     <div className="FilmeSelecionado">
       {selectedMovie && (
-        <div className="selected-movie-display" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${selectedMovie.backdrop_path})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="selected-movie-display" style={{ backgroundImage: `linear-gradient(to top, rgba(35, 35, 35, 1), rgba(0, 0, 0, 0) 20%), url(https://image.tmdb.org/t/p/w1280${selectedMovie.backdrop_path})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <img className='poster' src={`https://image.tmdb.org/t/p/w500${selectedMovie.poster_path}`} alt={selectedMovie.title} />
           <div className="movie-details">
             <h2>{selectedMovie.title}</h2>
             <p>Fulano • {selectedMovie.release_date}</p>
             <p>{selectedMovie.overview}</p>
             <div className='links'>
-              <Link to="/personagens">Ver personagens</Link>
-              <Link to="/trailers">Assistir trailer</Link>
+              <div className='link-personagens'><Link to="/personagens">Ver personagens</Link></div>
+              <div className='link-trailers'><Link to="/trailers">Assistir trailer</Link></div>
             </div>
           </div>
         </div>
