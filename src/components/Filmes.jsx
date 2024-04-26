@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
-import '../styles/Filmes.css'; // Importando o CSS para o componente
+import '../styles/Filmes.css';
 import YouTube from 'react-youtube';
+import MovieDetails from './MovieDetails'; // Mantenha a importação para usar no Home
 
-const Filmes = () => {
+const Filmes = ({ showDetails }) => {
   const API_KEY = "fca20a8a62aeb9dec3aca16c54e9a58f";
   const MOVIE_API = "https://api.themoviedb.org/3/";
   const DISCOVER_API = `${MOVIE_API}discover/movie?api_key=${API_KEY}&language=pt-BR&with_companies=10342&sort_by=release_date.desc`;
@@ -16,10 +17,10 @@ const Filmes = () => {
   const fetchMovies = useCallback(async () => {
     try {
       const response = await axios.get(DISCOVER_API);
-      const sortedMovies = response.data.results.slice(0, 8); // Limitar a 8 filmes
+      const sortedMovies = response.data.results.slice(0, 8);
       setMovies(sortedMovies);
-      setMovie(sortedMovies[0]); // Selecionar o filme mais recente
-      setTrailerKey(sortedMovies[0].videos?.results[0]?.key); // Ajustar chave do trailer para o filme mais recente
+      setMovie(sortedMovies[0]);
+      setTrailerKey(sortedMovies[0].videos?.results[0]?.key);
     } catch (error) {
       console.error('Erro ao buscar filmes', error);
     }
@@ -31,24 +32,16 @@ const Filmes = () => {
 
   const handleMovieSelect = movie => {
     setMovie(movie);
-    setTrailerKey(movie.videos?.results[0]?.key); // Ajustar chave do trailer
+    setTrailerKey(movie.videos?.results[0]?.key);
     setShowVideoPlayer(false);
   };
+
+  const handlePlayTrailer = () => setShowVideoPlayer(true);
 
   return (
     <div className="filmes">
       <h1>Filmes Studio Ghibli</h1>
-      {movie && (
-        <div className="selected-movie-display">
-          <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
-          <div className="movie-details">
-            <h2>{movie.title}</h2>
-            <p>{movie.overview}</p>
-            <p><strong>Lançamento:</strong> {movie.release_date}</p>
-            <button onClick={() => setShowVideoPlayer(true)}>Assistir Trailer</button>
-          </div>
-        </div>
-      )}
+      {showDetails && movie && <MovieDetails movie={movie} onPlayTrailer={handlePlayTrailer} />}
       <div className="movie-grid">
         {movies.map((movieItem) => (
           <div key={movieItem.id} className="movie-card" onClick={() => handleMovieSelect(movieItem)}>
