@@ -32,7 +32,7 @@
 
 .movie-card img {
     width: 140px; /* Largura fixa para todas as imagens */
-    height: 160px; /* Altura fixa para manter a proporção */
+    height: 190px; /* Altura fixa para manter a proporção */
 }
 
 .movie-card h2 {

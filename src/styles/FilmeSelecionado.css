@@ -5,6 +5,8 @@
 .selected-movie-display {
     display: flex;
     justify-content: space-between;
+    align-items: start;
+    flex-wrap: wrap;
 }
 
 .poster {
@@ -14,16 +16,16 @@
 .movie-details {
     width: 350px;
     text-align: justify;
-    float: right;
     background-color: rgba(255, 255, 255, 0.7);
     color: black;
     border-radius: 15px;
     padding-left: 30px;
     padding-right: 30px;
+    padding-bottom: 30px;
     margin: 50px;
 }
 
-.movie-details h2 {
+.movie-details h2 { 
     font-size: 30px;
 }
 
@@ -31,6 +33,36 @@
     display: flexbox;
     flex-direction: column;
 }
-.link-personagens Link{
+
+.link-personagens a{
     color: black;
+}
+
+.link-personagens {
+    margin-bottom: 25px;
+}
+
+.link-trailers a {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.link-trailers img {
+    height: 25px;
+}
+
+.link-trailers {
+    margin-right: 100px;
+    width: 170px;
+    transition: transform 0.1s;
+}
+
+.link-trailers:hover {
+    transform: scale(1.05);
 }

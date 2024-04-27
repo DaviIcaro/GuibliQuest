@@ -20,6 +20,7 @@
     align-items: center; /* Alinha o texto verticalmente no centro */
     justify-content: center; /* Alinha o texto horizontalmente no centro */
     margin-top: 10px;
+    margin-left: 27px;
 }
 
 .navbar-search {
@@ -32,6 +33,7 @@
     justify-content: center; /* Alinha o input horizontalmente no centro */
     padding: 0 10px; /* Padding interno para o input */
     box-sizing: border-box;
+    margin-right: 32px;
 }
 
 .navbar-search input {

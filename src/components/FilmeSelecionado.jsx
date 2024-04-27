@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import '../styles/FilmeSelecionado.css';
 import YouTube from 'react-youtube';
 import { MovieContext } from '../context/MovieContext';
+import youtubeLogo from '../assets/youtube-logo.png'
 
 const FilmeSelecionado = () => {
   const { selectedMovie } = useContext(MovieContext);
@@ -18,7 +19,9 @@ const FilmeSelecionado = () => {
             <p>{selectedMovie.overview}</p>
             <div className='links'>
               <div className='link-personagens'><Link to="/personagens">Ver personagens</Link></div>
-              <div className='link-trailers'><Link to="/trailers">Assistir trailer</Link></div>
+              <div className='link-trailers'>
+                <Link to="/trailers">Assistir trailer<img src={youtubeLogo} alt="youtube logo"/></Link>
+              </div>
             </div>
           </div>
         </div>
