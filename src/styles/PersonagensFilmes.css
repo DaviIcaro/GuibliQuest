@@ -1,0 +1,65 @@
+.personagem-filme-container {
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    color: black; /* Cor do texto para preto */
+    font-family: 'Radio Canada'; /* Fonte Lakki Reddy */
+}
+
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.character-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.character-card:hover {
+    transform: scale(1.05);
+}
+
+.character-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.character-card h3, .character-card p {
+    margin: 5px 0;
+    font-size: 16px;
+    text-align: center;
+    color: black;
+    font-family: 'Radio Canada'; /* Fonte Lakki Reddy */
+}
+
+.back-button {
+    display: inline-block;
+    background: url('../assets/icons8-voltar-64.png') no-repeat center center; /* Substitua pelo caminho correto da imagem */
+    background-size: contain; /* Certifique-se de que a imagem caiba dentro do botão */
+    width: 40px; /* Largura do botão */
+    height: 36px; /* Altura do botão */
+    text-align: center;
+    line-height: 36px; /* Centraliza o texto verticalmente */
+    color: white; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado do texto */
+    font-weight: bold; /* Deixa o texto em negrito */
+    padding-left: 40px; /* Espaço à esquerda para o texto não sobrepor a imagem */
+    margin-top: 20px; /* Espaço acima do botão */
+    cursor: pointer; /* Cursor do mouse como ponteiro */
+}
+
+.back-button:hover {
+    opacity: 0.8; /* Efeito ao passar o mouse */
+}
+

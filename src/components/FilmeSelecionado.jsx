@@ -1,7 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import '../styles/FilmeSelecionado.css';
-import YouTube from 'react-youtube';
 import { MovieContext } from '../context/MovieContext';
 import youtubeLogo from '../assets/youtube-logo.png'
 
