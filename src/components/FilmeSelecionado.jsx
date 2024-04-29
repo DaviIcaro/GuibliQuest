@@ -29,7 +29,7 @@ const FilmeSelecionado = () => {
             <p>{director ? director.name : 'Carregando nome do diretor'} • {selectedMovie.release_date} • {selectedMovie.vote_average.toFixed(1)}</p>
             <p>{selectedMovie.overview}</p>
             <div className='links'>
-              <div className='link-personagens'><Link to="/personagens">Ver personagens</Link></div>
+              <div className='link-personagens'><Link to="/personagens">Ver elenco</Link></div>
               <div className='link-trailers'>
                 <Link to="/trailers">Assistir trailer<img src={youtubeLogo} alt="youtube logo"/></Link>
               </div>

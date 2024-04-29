@@ -1,6 +1,9 @@
 import React, { useContext, useState, useEffect } from 'react';
 import YouTube from 'react-youtube';
 import { MovieContext } from '../context/MovieContext';
+import { Link } from "react-router-dom";
+import '../styles/TrailerPlayer.css'
+import voltar from "../assets/icons8-voltar-64.png"
 
 const TrailerPlayer = () => {
   const { selectedMovie } = useContext(MovieContext);
@@ -40,21 +43,15 @@ const TrailerPlayer = () => {
     },
   };
 
-  // Styles for background and centering
-  const trailerStyle = {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: '100vh',
-    width: '100%',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundImage: `url(https://image.tmdb.org/t/p/original${selectedMovie?.backdrop_path})`
-  };
-
   return (
-    <div style={trailerStyle}>
-      {videoId ? <YouTube videoId={videoId} opts={opts} /> : <p>Trailer não disponível</p>}
+    <div className='trailer-player' style={{ backgroundImage: `linear-gradient(to top, rgba(35, 35, 35, 1), rgba(0, 0, 0, 0) 20%), url(https://image.tmdb.org/t/p/w1280${selectedMovie.backdrop_path})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <div className='topo'>
+        <Link to="/home" className="voltar"><img src={voltar} alt="voltar" width={23} height={23}/>Voltar</Link>
+      </div>
+      <div className='content'>
+        <img className='movie-poster' src={`https://image.tmdb.org/t/p/w500${selectedMovie.poster_path}`} alt={selectedMovie.title} />
+        {videoId ? <YouTube videoId={videoId} opts={opts} /> : <p>Trailer não disponível</p>}
+      </div>
     </div>
   );
 };

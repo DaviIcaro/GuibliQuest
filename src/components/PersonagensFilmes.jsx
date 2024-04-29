@@ -1,7 +1,9 @@
 import React, { useContext, useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from "react-router-dom";
 import '../styles/PersonagensFilmes.css';
 import { MovieContext } from '../context/MovieContext';
+import voltar from "../assets/icons8-voltar-64.png"
 
 const PersonagensFilmes = () => {
     const { selectedMovie } = useContext(MovieContext);
@@ -27,9 +29,16 @@ const PersonagensFilmes = () => {
         }
     }, [selectedMovie]);
 
+    const backgroundImageUrl = selectedMovie && selectedMovie.backdrop_path
+        ? `linear-gradient(to top, rgba(35, 35, 35, 1), rgba(0, 0, 0, 0) 20%), url(https://image.tmdb.org/t/p/w1280${selectedMovie.backdrop_path})`
+        : 'linear-gradient(to top, rgba(35, 35, 35, 1), rgba(0, 0, 0, 0) 20%)';
+
     return (
-        <div className="personagem-filme-container" style={{ backgroundImage: `url(${selectedMovie ? `https://image.tmdb.org/t/p/original${selectedMovie.backdrop_path}` : ''})` }}>
-            {/* <h2>Dubladores - Elenco de {selectedMovie ? selectedMovie.title : ''}</h2> */}
+        <div className="personagem-filme-container" style={{ backgroundImage: backgroundImageUrl, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+            <div className='topo'>
+                <h2 className='nome-filme'>Elenco de: "{selectedMovie ? selectedMovie.title : ''}"</h2>
+                <Link to="/home" className="back-button"><img src={voltar} alt="voltar" width={23} height={23}/>Voltar</Link>
+            </div>
             <div className="character-grid">
                 {characters.map((character) => (
                     <div key={character.id} className="character-card">

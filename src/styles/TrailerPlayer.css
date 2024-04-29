@@ -1,0 +1,45 @@
+.trailer-player {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 60px;
+    margin-right: 50px;
+}
+
+.movie-poster {
+    margin-left: 50px;
+    height: 550px;
+}
+
+.topo {
+    padding: 10px;
+}
+
+.voltar {
+    background-color: white;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 30px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: transform 0.1s;
+    height: 30px;
+    margin-left: 93%;
+}
+
+.voltar:hover {
+    transform: scale(1.05);
+}
+
+.voltar img{
+    margin-right: 5px;
+}

@@ -11,6 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .telaInicialTexto {
@@ -34,6 +35,11 @@
 }
 
 .telaInicial a {
+    text-decoration: none;
+    color: black;
+}
+
+.botao-entrar{
     font-family: 'Radio Canada', sans-serif;
     background-color: white;
     color: black;
@@ -46,4 +52,9 @@
     padding-right: 15px;
     padding-top: 7px;
     padding-bottom: 7px;
+    transition: transform 0.1s;
+}
+
+.botao-entrar:hover{
+    transform: scale(1.05);
 }

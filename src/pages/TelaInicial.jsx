@@ -7,9 +7,11 @@ const TelaInicial = () => {
         <div className="telaInicial">
             <div className="telaInicialTexto">
                 <h1>GhibliQuest</h1>
-                <p>Adentre nesse mundo mágico</p>   
-                <Link to="/home" className="botaoEntrar">Entrar</Link>
-            </div>
+                <p>Adentre nesse mundo mágico</p>
+            </div>   
+                <div className="botao-entrar">
+                    <Link to="/home" className="botaoEntrar">Entrar</Link>
+                </div>
         </div>
     );
 }
