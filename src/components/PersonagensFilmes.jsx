@@ -20,7 +20,7 @@ const PersonagensFilmes = () => {
                         actor: actor.name,
                         profile_path: actor.profile_path
                     }));
-                    setCharacters(charactersData.slice(0, 10)); // Limitando a exibição para 10 personagens
+                    setCharacters(charactersData.slice(0, 10));
                 } catch (error) {
                     console.error('Erro ao buscar personagens', error);
                 }
@@ -28,6 +28,14 @@ const PersonagensFilmes = () => {
             fetchCharacters();
         }
     }, [selectedMovie]);
+
+    const handleOnClick = () => {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: 'smooth'
+        }); 
+      }
 
     const backgroundImageUrl = selectedMovie && selectedMovie.backdrop_path
         ? `linear-gradient(to top, rgba(35, 35, 35, 1), rgba(0, 0, 0, 0) 20%), url(https://image.tmdb.org/t/p/w1280${selectedMovie.backdrop_path})`
@@ -37,7 +45,7 @@ const PersonagensFilmes = () => {
         <div className="personagem-filme-container" style={{ backgroundImage: backgroundImageUrl, backgroundSize: 'cover', backgroundPosition: 'center' }}>
             <div className='topo'>
                 <h2 className='nome-filme'>Elenco de: "{selectedMovie ? selectedMovie.title : ''}"</h2>
-                <Link to="/home" className="back-button"><img src={voltar} alt="voltar" width={23} height={23}/>Voltar</Link>
+                <Link to="/home" className="back-button" onClick={() => handleOnClick()}><img src={voltar} alt="voltar" width={23} height={23}/>Voltar</Link>
             </div>
             <div className="character-grid">
                 {characters.map((character) => (

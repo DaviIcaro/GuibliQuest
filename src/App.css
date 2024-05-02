@@ -32,10 +32,6 @@ body {
   position: relative;
 }
 
-.poster-content {
-  width: 80%;
-}
-
 h1 {
   font-size: 92px;
   margin-top: 0;
@@ -43,225 +39,181 @@ h1 {
   margin-bottom: 10px;
 }
 
-.container {
-  background-color: #0F1014;
-  padding-top: 80px;
-  padding-bottom: 80px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 30px;
-  text-align: center;
-  align-items: center;
+.button {
+  margin: 20px 1px;
+  background: #0F1014;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 1px solid gray;
 }
 
-  .button {
-    margin: 20px 1px;
-    background: #0F1014;
-    color: white;
-    border: none;
-    outline: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: box-shadow 0.2s;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border: 1px solid gray;
-  }
-  
-  .button:hover {
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
-  }
-  
-  .close-video {
-    position: absolute;
-    bottom: -13px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 9000;
-  }
-  
-  .youtube-container {
-    position: relative;
-  }
-  
-  .brand {
-    font-weight: bold;
-  }
-  
-  .movie {
-    position: relative;
-    cursor: pointer;
-    text-align: left;
-    font-size: 16px;
-  }
-  
-  .movie img {
-    height: 355px;
-    max-width: 100%;
-  }
-  
-  .movie-infos {
-    padding: 15px 0;
-  }
-  
-  .movie-title {
-    margin: 0;
-  }
-  
-  .movie-voting {
-    position: absolute;
-    right: 5px;
-    top: 5px;
-    background-color: #0F1014;
-    border: 1px solid gray;
-    padding: 10px;
-    font-size: 12px;
-    border-radius: 25px;
-  }
-
-  .form {
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
-  
-  .search {
-    border: 1px solid darkslategray;
-    outline: transparent;
-    background-color: transparent;
-    padding: 5px 10px;
-    border-radius: 25px;
-    color: white;
-  }
-  
-  .submit-search {
-    position: absolute;
-    top: 55%;
-    right: -30px;
-    transform: translateY(-50%);
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 1.2rem;
-    color: white;
-  }
-  
-  .logo {
-    width: 150px;
-    height: auto;
-    display: block;
-    margin-right: 10px;
-    cursor: pointer;
-  }
-
-  .title {
-    text-align: center;
-    line-height: 15vh;
-}
-
-.jaca-icon-left {
-  width: 24px;
-  height: auto;
-  margin-right: 5px;
-}
-
-.jaca-icon-right {
-  width: 24px;
-  height: auto;
-  margin-left: 5px;
-}
-
-.video-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-}
-
-.youtube {
-  width: 1000px;
-  height: 500px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.center-video {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 999;
-}
-
-.fullscreen-video {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
+.button:hover {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 .close-video {
   position: absolute;
-  top: 10px;
+  bottom: -13px;
   left: 50%;
   transform: translateX(-50%);
-  width: 35px;
-  height: 35px;
-  background-color: rgb(119, 67, 67);
-  border: none;
-  outline: none;
+  z-index: 9000;
+}
+
+.youtube-container {
+  position: relative;
+}
+
+.movie {
+  position: relative;
   cursor: pointer;
+  text-align: left;
+  font-size: 16px;
+}
+
+.movie img {
+  height: 355px;
+  max-width: 100%;
+}
+
+.movie-infos {
+  padding: 15px 0;
+}
+
+.movie-title {
+  margin: 0;
+}
+
+.movie-voting {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background-color: #0F1014;
+  border: 1px solid gray;
+  padding: 10px;
+  font-size: 12px;
+  border-radius: 25px;
+}
+
+.form {
+  position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
+}
+
+.search {
+  border: 1px solid darkslategray;
+  outline: transparent;
+  background-color: transparent;
+  padding: 5px 10px;
+  border-radius: 25px;
+  color: white;
+}
+
+.submit-search {
+  position: absolute;
+  top: 55%;
+  right: -30px;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  display: block;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.title {
+  text-align: center;
+  line-height: 15vh;
+}
+
+.video-container {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.8);
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 9999;
+}
+
+.youtube {
+width: 1000px;
+height: 500px;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.center-video {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(0, 0, 0, 0.8);
+z-index: 999;
+}
+
+.fullscreen-video {
+width: 100%;
+height: 100vh;
+position: fixed;
+top: 0;
+left: 0;
+z-index: 9999;
+}
+
+.close-video {
+position: absolute;
+top: 10px;
+left: 50%;
+transform: translateX(-50%);
+width: 35px;
+height: 35px;
+background-color: rgb(119, 67, 67);
+border: none;
+outline: none;
+cursor: pointer;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 .close-video::before,
 .close-video::after {
-  content: "";
-  position: absolute;
-  width: 2px;
-  height: 25px;
-  background-color: white;
+content: "";
+position: absolute;
+width: 2px;
+height: 25px;
+background-color: white;
 }
 
 .close-video::before {
-  transform: rotate(45deg);
+transform: rotate(45deg);
 }
 
 .close-video::after {
-  transform: rotate(-45deg);
-}
-
-.logout-button {
-  position: absolute;
-  top: 65px;
-  right: 10px;
-  background-color: #f0e68c;
-  color: #030303;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.logout-button:hover {
-  background-color: #ffcc00;
+transform: rotate(-45deg);
 }

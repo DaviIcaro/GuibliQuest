@@ -1,4 +1,3 @@
-// Trailers.js
 import React from "react";
 import Navbar from "../components/Navbar";
 import TrailerPlayer from '../components/TrailerPlayer';

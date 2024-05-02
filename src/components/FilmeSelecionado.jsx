@@ -19,6 +19,14 @@ const FilmeSelecionado = () => {
     }
   }, [selectedMovie]);
 
+  const handleOnClick = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    }); 
+  }
+
   return (
     <div className="FilmeSelecionado">
       {selectedMovie && (
@@ -28,7 +36,7 @@ const FilmeSelecionado = () => {
             <h2>{selectedMovie.title}</h2>
             <p>{director ? director.name : 'Carregando nome do diretor'} • {selectedMovie.release_date} • {selectedMovie.vote_average.toFixed(1)}</p>
             <p>{selectedMovie.overview}</p>
-            <div className='links'>
+            <div className='links' onClick={() => handleOnClick()}>
               <div className='link-personagens'><Link to="/personagens">Ver elenco</Link></div>
               <div className='link-trailers'>
                 <Link to="/trailers">Assistir trailer<img src={youtubeLogo} alt="youtube logo"/></Link>
