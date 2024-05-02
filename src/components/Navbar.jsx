@@ -24,13 +24,13 @@ const Navbar = () => {
         
     };
 
-    const handleLogoClick = () => {
-        window.location.reload();
-      };
+    // const handleLogoClick = () => {
+    //     window.location.reload();
+    //   };
 
     return (
         <div className="navbar">
-            <div className="navbar-title" onClick={handleLogoClick}>GhibliQuest</div>
+            <div className="navbar-title">GhibliQuest</div>
             <div className="navbar-search">
                 <input type="text" placeholder="Pesquisar" value={searchText} onChange={(e) => setSearchText(e.target.value)} onKeyPress={(e) => e.key === 'Enter' && handleSearch()} />
                 <button className='submit' type='submit' onClick={handleSearch}>
