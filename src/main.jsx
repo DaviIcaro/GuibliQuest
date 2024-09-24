@@ -8,7 +8,7 @@ import { MovieProvider } from './context/MovieContext';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <MovieProvider>
-      <RouterProvider router={Rotas}/>
+      <RouterProvider router={Rotas}/>  
     </MovieProvider>
   </React.StrictMode>,
   document.getElementById('root')

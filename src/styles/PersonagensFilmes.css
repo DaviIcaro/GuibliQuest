@@ -2,7 +2,26 @@
     padding: 20px;
     font-family: 'Radio Canada';
     border-width: 0;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
 }
+
+.personagem-filme-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-size: inherit;
+    background-position: inherit;
+    filter: blur(10px); /* Ajuste o valor para mais ou menos desfoque */
+    z-index: -1;
+}
+
 
 .character-grid {
     display: grid;
